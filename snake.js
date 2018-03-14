@@ -61,7 +61,9 @@ function draw() {
 
     let snakeX=snake[0].x;
     let snakeY=snake[0].y;
-
+if(snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box){
+    clearInterval(game)
+}
 
     if(snakeX == foodPlace.x && snakeY == foodPlace.y){
         score++;
