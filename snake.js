@@ -26,7 +26,7 @@ let foodPlace={
 }
 
 let score=0;
-var d="LEFT";
+var d;
 document.addEventListener("keydown",direction);
 
 function direction(event) {
@@ -62,7 +62,20 @@ function draw() {
     let snakeX=snake[0].x;
     let snakeY=snake[0].y;
 
-     snake.pop();
+
+    if(snakeX == foodPlace.x && snakeY == foodPlace.y){
+        score++;
+        foodPlace={
+            x:Math.floor(Math.random()*17+1) * box,
+            y:Math.floor(Math.random()*15+3) * box
+        }
+
+
+    }
+    else{
+        snake.pop();
+    }
+
      //console.log(snake);
 
     if(d == "LEFT") snakeX -= box;
