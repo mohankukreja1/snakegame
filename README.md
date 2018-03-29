@@ -1,3 +1,3 @@
 # snakegame
 
-## a simple snake and ladder game made using HTML canvas
+## a simple snake game made using HTML canvas and javascript
